@@ -36,7 +36,7 @@
                     <div class="col-sm-12">
                         <form>
                             <div class="form-group">
-                                <textarea class="form-control text-center text-muted" id="password-box" rows="10">Your secure password</textarea>
+                                <textarea class="form-control text-center text-muted" id="password-box" rows="10" readonly>Your secure password</textarea>
                             </div>
                         </form>
                     </div>
@@ -47,12 +47,12 @@
                         
                     <!-- Button on the left that says "Genrate password" -->
                     <div class="col-sm-6">
-                        <button type="button" class="btn btn-danger btn-lg">Generate Password</button>
+                        <button type="button" class="btn btn-danger btn-lg" onclick="generatePassword()">Generate Password</button>
                     </div>
 
                     <!-- Button on the right that says "Copy to clipboard" -->
                     <div class="col-sm-6">
-                        <button type="button" class="btn btn-info btn-lg">Copy to Clipboard</button>
+                        <button type="button" class="btn btn-info btn-lg" id="generateButton" onclick="copy()" >Copy to Clipboard</button>
                     </div>
                 </div>
                 
