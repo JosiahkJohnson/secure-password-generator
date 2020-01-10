@@ -7,7 +7,7 @@
     <title>Secure-Password</title>
 
     <!-- Bootstrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom css link -->
@@ -17,7 +17,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-    
+
     <!-- Main Content on page -->
     <div class="jumbotron">
 
@@ -26,17 +26,31 @@
 
         <!-- Container holding the Newly generated password and button controls -->
         <div class="row">
-            
+
             <!-- Content container -->
             <div class="container">
                 <h2 class="text-left">Generate a Password</h2>
 
                 <!-- Password parameters -->
+                <!-- ============================ -->
+                <!-- password length line -->
                 <div class="row">
-                    
+                    <div class="col-sm-12">
+                        <form class="form-inline">
+                            <div class="form-group mx-sm-3">
+                                <label for="length" class="label">Password length</label>
+                                <textarea class="form-control" id="length" cols="3" rows="1"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Password charicter type line -->
+                <div class="row">
+
                     <!-- Left column -->
                     <div class="col-sm-6">
-                        
+
                         <!-- Contains numbers -->
                         <div class="row">
                             <div class="custom-control custom-checkbox">
@@ -53,19 +67,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Right Column -->
                     <div class="col-sm-6">
 
-                        <!-- Contains Letters -->
-                        <div class="row">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="box" name="settings" value="letters">
-                                <label for="letters" class="label">Letters</label>
-                            </div>
-                        </div>
-
-                        <!-- Capitol letters? -->
+                        <!-- Capitol letters -->
                         <div class="row">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="box" name="settings" value="capitols">
@@ -73,7 +79,7 @@
                             </div>
                         </div>
 
-                        <!-- Lower case letters? -->
+                        <!-- Lower case letters -->
                         <div class="row">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="box" name="settings" value="lowers">
@@ -82,7 +88,8 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- ================================================================================ -->
+                
                 <!-- Container's password form -->
                 <div class="row">
                     <div class="col-sm-12">
@@ -96,10 +103,10 @@
 
                 <!-- Button row -->
                 <div class="row">
-                        
+
                     <!-- Button on the left that says "Genrate password" -->
                     <div class="col-sm-6">
-                        <button type="button" class="btn btn-danger btn-lg" onclick="generatePassword()">Generate Password</button>
+                        <button type="button" class="btn btn-danger btn-lg" onclick="generateCustomPassword()">Generate Password</button>
                     </div>
 
                     <!-- Button on the right that says "Copy to clipboard" -->
@@ -107,7 +114,7 @@
                         <button type="button" class="btn btn-info btn-lg" id="generateButton" onclick="copy()" >Copy to Clipboard</button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
